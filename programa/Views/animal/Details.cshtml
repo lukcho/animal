@@ -1,0 +1,29 @@
+﻿@model programa.Models.animal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>animal</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.edad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.edad)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.animalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
